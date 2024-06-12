@@ -1,0 +1,48 @@
+{% extends "_layouts/default.html" %}
+
+{% block title %}
+Another Example
+{% endblock %}
+
+{% block navbar %}
+{% include "_includes/examples/navbar-example.html" %}
+{% endblock %}
+
+{% block header_title %}
+This is another example that extends default.html
+{% endblock %}
+
+{% block body_content %}
+<div class="row justify-content-evenly align-items-center bg-light">
+    <div class="card col-4">
+        <img
+            class="card-img-top"
+            src="https://jsoc1.stanford.edu/data/hmi/images/latest/HMI_latest_Mag_256x256.gif"
+            alt="HMI Magnetogram Latest" />
+        <div class="card-body">
+            <h4 class="card-title">HMI Magnetogram (latest)</h4>
+            <p class="card-text">
+                This is an example of a Bootstrap card, showing our latest
+                Magnetogram image.
+                The image is created every 30 minutes or so, and stored at
+                a different location (not provided as a local asset.)
+            </p>
+        </div>
+    </div>
+    <div class="col-4">
+        This section with the card and these words <em>(the light grey box)</em>
+        is a HTML <code>div</code> element with the classes "row",
+        "justify-content-evenly", and "align-items-center".
+        See <a href="https://getbootstrap.com/docs/5.0/layout/grid/">Bootstrap Grid</a>
+        documentation to better understand how the layout of this section is
+        generated with only a few lines of code. 
+        {# Take a look at another <a href="example.html">basic example</a> that
+        was created when you built this website. #}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "_includes/examples/footer-example.html" %}
+{% endblock %}

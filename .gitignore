@@ -1,3 +1,7 @@
+# Ignore project specific things
+/static/css
+
+# Ignore some Python stuff
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

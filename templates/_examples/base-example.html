@@ -1,0 +1,35 @@
+{#
+    This line says to use the "_base.html" file as a starting point.
+    It will render an HTML file with the HTML found in "_base.html", then fill
+    in the blocks with the values provided below.
+#}
+{% extends "_layouts/base.html" %}
+
+{# This line fills in the "title" block #}
+{% block title %}Example Page{% endblock %}
+
+{# This line fills in the "body" block #}
+{% block body %}
+
+<h1>An Example Page</h1>
+<p>
+    This page is just an example of how to use
+    Jinja,
+    Bootstrap&nbsp;<i class="fa-brands fa-bootstrap"></i>,
+    and Font Awesome&nbsp;<i class="fa-regular fa-font-awesome"></i>
+    to create a simple page!
+
+    The page is created using a base template that should be used by all pages
+    by default.
+</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            This is a column in Bootstrap's grid system.
+        </div>
+        <div class="col-6">
+            This is also a column. Both are in a single row.
+        </div>
+    </div>
+</div>
+{% endblock %}
