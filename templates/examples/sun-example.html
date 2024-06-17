@@ -1,0 +1,89 @@
+{% extends "_layouts/base.html" %}
+
+{# This line fills in the "title" block #}
+{% block title %}Stanford Solar Observatory Group{% endblock %}
+
+{# This line fills in the "body" block #}
+{% block body %}
+
+{% block body_content %}
+    <div class="row align-items-start">
+    
+        <div class="card col-2">
+            <img
+                class="row no-gutters"
+                src="https://jsoc1.stanford.edu/data/hmi/images/latest/HMI_latest_Mag_256x256.gif"
+                alt="HMI Magnetogram Latest" />
+        </div>
+
+        <div class="card col-2">
+            <img
+                class="row no-gutters"
+                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0171.jpg"
+                alt="HMI Magnetogram Latest" />
+        </div>
+
+        <div class="card col-2">
+            <img
+                class="row no-gutters"
+                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0304.jpg"
+                alt="HMI Magnetogram Latest" />
+        </div>
+
+        <div class="card col-2">
+            <img
+                class="row no-gutters"
+                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0131.jpg"
+                alt="HMI Magnetogram Latest" />
+        </div>
+
+        <div class="card col-2">
+            <img
+                class="row no-gutters"
+                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_HMIIF.jpg"
+                alt="HMI Magnetogram Latest" />
+        </div>
+    </div>
+
+        <div class="card col-2">
+            <img
+                class="row no-gutters"
+                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0094.jpg"
+                alt="HMI Magnetogram Latest" />
+        </div>
+
+
+
+{% endblock %}
+
+<div class="col-7">
+    <h1>Solar Physics at Stanford University</h1>
+</div>
+
+<p>
+    Here you will find links and information relating to projects of the Stanford Solar 
+    Observatories Group.* Major projects include COFFIES, HMI, and WSO. 
+    Solar activity is a Consequence of Fields and Flows of the Interior and Exterior of the 
+    Sun (COFFIES). The COFFIES DRIVE Science Center aims to understand the solar cycle well 
+    enough to reliably forecast and magnetic field variability. The Helioseismic and Magnetic Imager 
+    (HMI) instrument continually observes the Sun. We use its velocity and magnetic data to study 
+    the origins of solar variability and measure the Sun's interior using helioseismology. 
+    HMI is part of NASA's Solar Dynamics Observatory (SDO) mission launched in 2010. 
+    The Wilcox Solar Observatory (WSO) has taken daily solar observations from the 
+    foothills above the Stanford campus since 1975.
+</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            This is a column in Bootstrap's grid system.
+        </div>
+        <div class="col-6">
+            This is also a column. Both are in a single row.
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
