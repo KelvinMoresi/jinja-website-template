@@ -7,50 +7,82 @@
 {% block body %}
 
 {% block body_content %}
-    <div class="row align-items-start">
-    
-        <div class="card col-2">
-            <img
-                class="row no-gutters"
-                src="https://jsoc1.stanford.edu/data/hmi/images/latest/HMI_latest_Mag_256x256.gif"
-                alt="HMI Magnetogram Latest" />
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Row</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .row.no-gutters {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .row.no-gutters > [class*='col-'] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .img-fluid {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col">
+                <img
+                    class="img-fluid"
+                    src="https://jsoc1.stanford.edu/data/hmi/images/latest/HMI_latest_Mag_256x256.gif"
+                    alt="HMI Magnetogram Latest" />
+            </div>
 
-        <div class="card col-2">
-            <img
-                class="row no-gutters"
-                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0171.jpg"
-                alt="HMI Magnetogram Latest" />
-        </div>
+            <div class="col">
+                <img
+                    class="img-fluid"
+                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0171.jpg"
+                    alt="HMI Magnetogram Latest" />
+            </div>
 
-        <div class="card col-2">
-            <img
-                class="row no-gutters"
-                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0304.jpg"
-                alt="HMI Magnetogram Latest" />
-        </div>
+            <div class="col">
+                <img
+                    class="img-fluid"
+                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0304.jpg"
+                    alt="HMI Magnetogram Latest" />
+            </div>
 
-        <div class="card col-2">
-            <img
-                class="row no-gutters"
-                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0131.jpg"
-                alt="HMI Magnetogram Latest" />
-        </div>
+            <div class="col">
+                <img
+                    class="img-fluid"
+                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0131.jpg"
+                    alt="HMI Magnetogram Latest" />
+            </div>
 
-        <div class="card col-2">
-            <img
-                class="row no-gutters"
-                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_HMIIF.jpg"
-                alt="HMI Magnetogram Latest" />
+            <div class="col">
+                <img
+                    class="img-fluid"
+                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_HMIIF.jpg"
+                    alt="HMI Magnetogram Latest" />
+            </div>
+
+            <div class="col">
+                <img
+                    class="img-fluid"
+                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0094.jpg"
+                    alt="HMI Magnetogram Latest" />
+            </div>
         </div>
     </div>
 
-        <div class="card col-2">
-            <img
-                class="row no-gutters"
-                src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0094.jpg"
-                alt="HMI Magnetogram Latest" />
-        </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
 
 
 
