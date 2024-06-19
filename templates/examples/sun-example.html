@@ -12,70 +12,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Row</title>
+    <title>Custom Navbar with Images</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .row.no-gutters {
-            margin-right: 0;
-            margin-left: 0;
+        .custom-navbar {
+            background: linear-gradient(to right, black, black calc(50% - 50px), #a92626 calc(100% - 50px), #a92626); /* Gradient from black to red */
+            height: 150px; /* Set height of the navbar */
+            padding: 0; /* Remove default padding */
+            position: relative; /* Ensure relative positioning */
         }
-        .row.no-gutters > [class*='col-'] {
-            padding-right: 0;
-            padding-left: 0;
+        .navbar-content {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center align items */
+            justify-content: flex-start; /* Start from left */
+            height: 100%; /* Full height */
+            padding: 0 15px; /* Padding left and right */
+        }
+        .navbar-images {
+            display: flex; /* Use flexbox for images */
+            flex-shrink: 0; /* Prevent shrinking */
+            align-items: center; /* Center align images */
+            height: 100%; /* Full height of the navbar */
+        }
+        .navbar-images img {
+            height: 100%; /* Full height of the navbar */
+            width: auto; /* Maintain aspect ratio */
+            margin: 0; /* Remove margin between images */
+        }
+        .navbar-title-container {
+            position: absolute; /* Position absolutely */
+            bottom: 0; /* Align to bottom of navbar */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust to center */
+            background-color: white; /* White background */
+            padding: 5px 15px; /* Padding inside the container */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            z-index: 10; /* Ensure above the gradient */
+        }
+        .navbar-title {
+            color: black; /* Text color */
+            font-size: 20px; /* Font size */
+            margin: 0; /* Remove default margin */
+        }
+        .navbar-nav {
+            display: flex; /* Use flexbox for navigation */
+            align-items: center; /* Center align items */
+            margin-left: auto; /* Push to the right */
+        }
+        .navbar-nav .nav-link {
+            color: white; /* Text color */
+            font-size: 16px; /* Font size */
+            padding: 8px 15px; /* Padding around links */
         }
         .img-fluid {
-            width: 100%;
-            height: auto;
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any inline spacing */
+            float: left; /* Float the image to the left */
+            margin-right: 10px; /* Add spacing to the right of the image */
         }
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row no-gutters">
-            <div class="col">
-                <img
-                    class="img-fluid"
-                    src="https://jsoc1.stanford.edu/data/hmi/images/latest/HMI_latest_Mag_256x256.gif"
-                    alt="HMI Magnetogram Latest" />
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid navbar-content">
+            <!-- Navbar Images -->
+            <div class="navbar-images">
+                <img src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0171.jpg" alt="Image 1">
+                <img src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0304.jpg" alt="Image 2">
+                <img src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0131.jpg" alt="Image 3">
             </div>
+            <!-- Navbar Title and Navigation -->
+            <div class="navbar-title-container">
+                <div class="navbar-title">
+                    Stanford Solar Observatory Group
+                </div>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Seminars And Meetings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Visitors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">People</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Internal Information</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-            <div class="col">
-                <img
-                    class="img-fluid"
-                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0171.jpg"
-                    alt="HMI Magnetogram Latest" />
-            </div>
+{% endblock %}
 
-            <div class="col">
-                <img
-                    class="img-fluid"
-                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0304.jpg"
-                    alt="HMI Magnetogram Latest" />
-            </div>
+<div class="container mt-3">
+    <div class="row align-items-start">
+        <div class="col-md-2">
+            <img src="http://sun.stanford.edu/new/images/interior.jpg" alt="Small Image" class="img-fluid">
+        </div>
+        <div class="col-md-10">
+            <h5>Welcome to sun.stanford.edu: Home of the Stanford Solar Observatories Group</h5>
+            <hr/>
+            <p>
+                Here you will find links and information relating to projects of the Stanford Solar 
+                Observatories Group. Major projects include COFFIES, HMI, and WSO. 
+                Solar activity is a Consequence of Fields and Flows of the Interior and Exterior of the 
+                Sun (<a href="https://coffies.stanford.edu/" style="color: red;">COFFIES</a>). 
 
-            <div class="col">
-                <img
-                    class="img-fluid"
-                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0131.jpg"
-                    alt="HMI Magnetogram Latest" />
-            </div>
+                The COFFIES DRIVE Science Center aims to understand the solar cycle well 
+                enough to reliably forecast and magnetic field variability. The Helioseismic and Magnetic Imager 
+                (<a href="http://hmi.stanford.edu/" style="color: red;">HMI</a>) instrument continually observes the Sun. We use its velocity and magnetic data to study 
+                the origins of solar variability and measure the Sun's interior using helioseismology. 
+                HMI is part of NASA's Solar Dynamics Observatory (<a href="https://sdo.gsfc.nasa.gov/" style="color: red;">SDO</a>) mission launched in 2010. 
+                The Wilcox Solar Observatory (<a href="http://wso.stanford.edu/" style="color: red;">WSO</a>) has taken daily solar observations from the 
+                foothills above the Stanford campus since 1975.
+            </p>
 
-            <div class="col">
-                <img
-                    class="img-fluid"
-                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_HMIIF.jpg"
-                    alt="HMI Magnetogram Latest" />
-            </div>
-
-            <div class="col">
-                <img
-                    class="img-fluid"
-                    src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0094.jpg"
-                    alt="HMI Magnetogram Latest" />
-            </div>
+            <ul class="nav justify-content-center fs-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://coffies.stanford.edu">COFFIES Nasa Drive Science Center</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://sdo.gsfc.nasa.gov">Solar Dynamics Observatory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://jsoc1.stanford.edu:8080">JSOC Data</a>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -83,39 +163,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-{% endblock %}
-
-<div class="col-7">
-    <h1>Solar Physics at Stanford University</h1>
-</div>
-
-<p>
-    Here you will find links and information relating to projects of the Stanford Solar 
-    Observatories Group.* Major projects include COFFIES, HMI, and WSO. 
-    Solar activity is a Consequence of Fields and Flows of the Interior and Exterior of the 
-    Sun (COFFIES). The COFFIES DRIVE Science Center aims to understand the solar cycle well 
-    enough to reliably forecast and magnetic field variability. The Helioseismic and Magnetic Imager 
-    (HMI) instrument continually observes the Sun. We use its velocity and magnetic data to study 
-    the origins of solar variability and measure the Sun's interior using helioseismology. 
-    HMI is part of NASA's Solar Dynamics Observatory (SDO) mission launched in 2010. 
-    The Wilcox Solar Observatory (WSO) has taken daily solar observations from the 
-    foothills above the Stanford campus since 1975.
-</p>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-6">
-            This is a column in Bootstrap's grid system.
-        </div>
-        <div class="col-6">
-            This is also a column. Both are in a single row.
-        </div>
-    </div>
-</div>
-
-
 
 {% endblock %}
 
