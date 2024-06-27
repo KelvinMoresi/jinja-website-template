@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanford Solar Observatory Group</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-navbar {
+            background: linear-gradient(to right, black, black calc(30% - 50px), #8C1515 calc(100% - 50px), #8C1515); /* Gradient from black to red */
+            height: 50px;
+            padding: 0;
+            position: relative;
+        }
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+            padding: 0 15px;
+        }
+        .navbar-images {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            height: 100%;
+        }
+        .navbar-images img {
+            height: 100%;
+            width: auto;
+            margin: 0;
+        }
+        .navbar-title-container {
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .navbar-title {
+            color: black;
+            font-size: 25px;
+            margin: 0;
+        }
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            font-size: 16px;
+            padding: 8px 15px;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            float: left;
+            margin-right: 10px;
+        }
+        .footer-container {
+        background-color: #8C1515;
+        padding: 10px;
+        }
+        .footer-container .nav-link {
+            color: #FFFFFF;
+        }
+        .container-fluid .nav-link:hover {
+            color: #FFDD00;
+        }
+        .footer-container .nav-link:hover {
+            color: #FFDD00;
+        }
+        .title-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .title-container h5 {
+            margin: 0; 
+        }
+        .navbar-nav .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid navbar-content">
+            <!-- Navbar Images -->
+            <div class="navbar-images">
+                <img src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0171.jpg" alt="Image 1">
+                <img src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0304.jpg" alt="Image 2">
+                <img src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0131.jpg" alt="Image 3">
+                <img src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0094.jpg" alt="Image 4">
+            </div>
+            <!-- Navbar Title and Navigation -->
+            <div class="navbar-title-container">
+                <div class="navbar-title">
+                    Stanford Solar Observatory Group
+                </div>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Seminars and Meetings
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Solar Phyiscs Seminars</a>
+                        <a class="dropdown-item" href="#">Events & Seminars at KIPAC</a>
+                        <a class="dropdown-item" href="#">LMSAL Seminars</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Publications
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">ApJ Abstracts</a>
+                        <a class="dropdown-item" href="#">Solar Phyiscs Abstracts</a>
+                        <a class="dropdown-item" href="#">Other Reference Tools</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Vistors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">People</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Internal Information
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Local Info</a>
+                        <a class="dropdown-item" href="#">Employment Opportunities</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="title-container">
+        <h5>Welcome to sun.stanford.edu: Home of the Stanford Solar Observatories Group</h5>
+    </div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-10">
+            <hr/>
+            <div class="col-md-4">
+                <img src="http://sun.stanford.edu/new/images/interior.jpg" alt="Small Image" class="img-fluid">
+            </div>
+                <p>
+                    Here you will find links and information relating to projects of the Stanford Solar 
+                    Observatories Group. Major projects include COFFIES, HMI, and WSO. 
+                    Solar activity is a Consequence of Fields and Flows of the Interior and Exterior of the 
+                    Sun (<a href="https://coffies.stanford.edu/" style="color: #B1040E;">COFFIES</a>). 
+                    The COFFIES DRIVE Science Center aims to understand the solar cycle well 
+                    enough to reliably forecast and magnetic field variability. The Helioseismic and Magnetic Imager 
+                    (<a href="http://hmi.stanford.edu/" style="color: #B1040E;">HMI</a>) instrument continually observes the Sun. We use its velocity and magnetic data to study 
+                    the origins of solar variability and measure the Sun's interior using helioseismology. 
+                    HMI is part of NASA's Solar Dynamics Observatory (<a href="https://sdo.gsfc.nasa.gov/" style="color: #B1040E;">SDO</a>) mission launched in 2010. 
+                    The Wilcox Solar Observatory (<a href="http://wso.stanford.edu/" style="color: #B1040E;">WSO</a>) has taken daily solar observations from the 
+                    foothills above the Stanford campus since 1975.
+                </p>
+    </div>
+</div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center text-center">
+            <div class="col-12">
+                <h4>The Sun Today</h4>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <div class="col-auto px-0">
+                    <h5>SDO/HMI Intensity (left)</h5>
+                    <img
+                        class="img-fluid"
+                        src="http://jsoc.stanford.edu/data/hmi/images/latest/HMI_latest_Int_256x256.gif"
+                        alt="HMI Magnetogram Latest" />
+                </div>
+                <div class="col-auto px-0">
+                    <h5>and</h5>
+                </div>
+                <div class="col-auto px-1">
+                    <h5>Magnetogram (right)</h5>
+                    <img
+                        class="img-fluid"
+                        src="http://jsoc.stanford.edu/data/hmi/images/latest/HMI_latest_color_Mag_256x256.jpg"
+                        alt="HMI Magnetogram Latest" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h6> Quick Links: </h6>
+        <ul>
+            <li><a href="https://coffies.stanford.edu/" style="color: #B1040E;">COFFIES - Consequence of Fields and Flows of the Interior and Exterior of the Sun</a> -- a NASA Heliophysics DRIVE Science Center</li>
+            <li><a href="http://hmi.stanford.edu/" style="color: #B1040E;">HMI - Helioseismic and Magnetic Imager </a> -- an instrument on the Solar Dynamics Observatory</li>
+            <li><a href="http://wso.stanford.edu/" style="color: #B1040E;">WSO - Wilcox Solar Observatory</a> -- located in the Stanford foothills</li>
+            <li><a href="http://jsoc.stanford.edu/" style="color: #B1040E;">JSOC - HMI-AIA Joint Science Operations Center</a> -- access to data in the JSOC for HMI, AIA, MDI, IRIS and more</li>
+                <ul>
+                    <li><a href="http://jsoc.stanford.edu/data/jsoc_proc_status.html" style="color: #B1040E;">JSOC Status</a> - Status of the JSOC Data Processing from SDO</li>
+                </ul>
+            <li><a href="http://soi.stanford.edu/" style="color: #B1040E;">MDI - Michelson Doppler Imager</a>-- access to data in the JSOC for HMI, AIA, MDI, IRIS and more</li>
+            <li><a href="https://solar-center.stanford.edu/" style="color: #B1040E;">Stanford SOLAR Center</a>  -- the Solar Oscillations Investigation (SOI) on SOHO, launched in 1995</li>
+        </ul>
+        <ul class="list-unstyled">
+            <p class="small"> * Observational and theoretical research on the physics of the Sun is carried out at Stanford University in several research groups. This page links to the projects carried out by a group of scientists and supporting staff associated with the Hansen Experimental Physics Laboratories (HEPL) and the Kavli Institute for Particle Astrophysics and Cosmology (KIPAC) under the direction of Profs. J. Todd Hoeksema and Philip Scherrer (HEPL and the Department of Physics).</p>
+          </ul>
+          
+    </div>
+    
+</div>
+<hr/>
+
+<div class="footer-container">
+    <ul class="nav justify-content-center fs-5">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+    </ul>
+</div>
+</div>
+</body>
+</html>
+
